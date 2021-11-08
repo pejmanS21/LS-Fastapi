@@ -2,7 +2,26 @@
 
 This app uses `FastAPI` as backend.
 
-## Usage
+## Usage for `app.py`
+
+First install required libraries by running:
+
+    pip install -r requirements.txt
+
+To run the application run following command in `src` dir:
+
+    uvicorn app:app --reload
+
+or
+
+    chmod +x app.sh
+    ./app.sh
+
+## Tutorial for `app.py`
+
+![app.gif](images/app.gif)
+
+## Usage for `main.py`
 
 First install required libraries by running:
 
@@ -14,8 +33,8 @@ To run the application run following command in `src` dir:
 
 or
 
-    chmod +x run.sh
-    ./run.sh
+    chmod +x main.sh
+    ./main.sh
 
 ## Tutorial
 

@@ -6,9 +6,9 @@ import cv2
 import os
 import numpy as np
 from PIL import Image
-from io import BytesIO
 import io
 from starlette.responses import StreamingResponse
+
 
 # create a fastapi app instance.
 app = FastAPI(
@@ -87,3 +87,5 @@ async def unet_lite_predict_visual(image: UploadFile = File(...)):
     
     _, mask_png = cv2.imencode(".png", mask[0] * 255.0)
     return StreamingResponse(io.BytesIO(mask_png.tobytes()), media_type="image/png")
+
+
