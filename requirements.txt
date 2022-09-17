@@ -7,3 +7,5 @@ fastapi
 uvicorn
 pydantic
 python-multipart
+dvc
+dvc-gdrive
