@@ -1,0 +1,4 @@
+outs:
+- md5: 578c58ff37a94cb642796fc79fecd555
+  size: 31054708
+  path: cxr_unet.tflite

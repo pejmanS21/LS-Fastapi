@@ -4,3 +4,6 @@ Pillow
 tensorflow
 keras
 fastapi
+uvicorn
+pydantic
+python-multipart

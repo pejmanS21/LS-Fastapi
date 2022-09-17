@@ -1,0 +1,4 @@
+outs:
+- md5: b90eedcbd56125a2040517c7b9909cb8
+  size: 18871792
+  path: cxr_resunet.tflite
