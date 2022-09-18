@@ -1,0 +1,41 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: lsapi-service
+spec:
+  selector:
+    app: lsapi
+  ports:
+    - protocol: TCP
+      port: 8000
+      targetPort: 8000
+ 
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: lsapi
+  labels:
+    app: lsapi
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: lsapi
+  template:
+    metadata:
+      labels:
+        app: lsapi
+    spec:
+      containers:
+        - name: lsapi
+          # image: pejmans21/ls-fastapi:0.1.0   # on amd64
+          image: pejmans21/ls-fastapi:aarch64   # on arm64
+          ports:
+            - containerPort: 8000
+          imagePullPolicy: Always
+          resources:
+            # You must specify requests for CPU to autoscale
+            # based on CPU utilization
+            requests:
+              cpu: "250m"
