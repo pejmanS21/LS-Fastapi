@@ -38,4 +38,8 @@ spec:
             # You must specify requests for CPU to autoscale
             # based on CPU utilization
             requests:
-              cpu: "250m"
+              cpu: 250m # milicore
+              ram: 256Mi
+            limits:
+              cpu: 1000m  # 1000 milicore == 1 vCPU
+              ram: 512Mi
